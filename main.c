@@ -10,6 +10,7 @@ struct BilletBus {
     int siege;
     char nomPassager[50];
     char telephone[15];
+
 };
 
 // Structure de données pour le système de paiement
@@ -22,33 +23,61 @@ struct SystemePaiement {
 // Fonction pour rechercher des itinéraires de bus disponibles
 void rechercherItineraires() {
     printf("Voici les itineraires disponibles :\n");
-    // Logique de recherche d'itinéraires
-    // Ici, nous affichons simplement des exemples statiques
+
+    // Itinéraire 1 : lubumbashi - kinshasa
     printf("1. lubumbashi - kinshasa\n");
+    printf("   Prix : 250,000 FC | 150 USD\n");
     printf("----------------------------------------------------\n");
+
+    // Itinéraire 2 : lubumbashi - likasi
     printf("2. lubumbashi - likasi\n");
+    printf("   Prix : 100,000 FC | 60 USD\n");
     printf("----------------------------------------------------\n");
+
+    // Itinéraire 3 : lubumbashi - kipushi
     printf("3. lubumbashi - kipushi\n");
+    printf("   Prix : 80,000 FC | 50 USD\n");
     printf("----------------------------------------------------\n");
+
+    // Itinéraire 4 : lubumbashi - kolwezi
     printf("4. lubumbashi - kolwezi\n");
+    printf("   Prix : 200,000 FC | 120 USD\n");
     printf("----------------------------------------------------\n");
+
+    // Itinéraire 5 : lubumbashi - kisangani
     printf("5. lubumbashi - kisangani\n");
+    printf("   Prix : 350,000 FC | 210 USD\n");
     printf("----------------------------------------------------\n");
+
+    // Itinéraire 6 : lubumbashi - goma
     printf("6. lubumbashi - goma\n");
+    printf("   Prix : 300,000 FC | 180 USD\n");
     printf("----------------------------------------------------\n");
+
+    // Itinéraire 7 : lubumbashi - kalemi
     printf("7. lubumbashi - kalemi\n");
+    printf("   Prix : 180,000 FC | 110 USD\n");
     printf("----------------------------------------------------\n");
+
+    // Itinéraire 8 : lubumbashi - bukavu
     printf("8. lubumbashi - bukavu\n");
+    printf("   Prix : 240,000 FC | 145 USD\n");
     printf("----------------------------------------------------\n");
+
+    // Itinéraire 9 : lubumbashi - lusaka
     printf("9. lubumbashi - lusaka\n");
+    printf("   Prix : 200,000 FC | 120 USD\n");
     printf("----------------------------------------------------\n");
-    printf("10.lubumbashi - nkongolo\n");
+
+    // Itinéraire 10 : lubumbashi - nkongolo
+    printf("10. lubumbashi - nkongolo\n");
+    printf("    Prix : 120,000 FC | 75 USD\n");
     printf("----------------------------------------------------\n");
 }
 
 // Fonction pour réserver un billet de bus
 void reserverBillet(struct BilletBus billets[], int *numBillets) {
-    printf("Réserver un billet de bus :\n\n");
+    printf("Reserver un billet de bus :\n\n");
     // Logique de réservation de billet
     struct BilletBus billet;
     billet.id = *numBillets + 1; // ID unique pour chaque billet
@@ -60,6 +89,7 @@ void reserverBillet(struct BilletBus billets[], int *numBillets) {
     scanf(" %[^\n]s", billet.nomPassager);
     printf("Entrez votre numero de telephone : \n");
     scanf(" %[^\n]s", billet.telephone);
+
 
     // Simuler la sélection automatique du siège (par exemple, affectation séquentielle)
     billet.siege = *numBillets + 1;
@@ -73,7 +103,7 @@ void reserverBillet(struct BilletBus billets[], int *numBillets) {
 // Fonction pour afficher les détails d'un billet de bus
 void afficherBillet(struct BilletBus billet) {
      printf("-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=");
-     printf("\n ID : %d\n Destination : %s\n Date : %s\n Siège : %d\n Nom : %s\n Téléphone : %s\n",
+     printf("\n ID : %d\n Destination : %s\n Date : %s\n Siege : %d\n Nom : %s\n Telephone : %s\n",
            billet.id, billet.destination, billet.date, billet.siege, billet.nomPassager, billet.telephone);
      printf("-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=");
 }
@@ -142,7 +172,7 @@ int main() {
         printf("======================================================================\n");
     do {
         printf("\nMenu :\n");
-        printf("1. Rechercher des itinéraires de bus disponibles\n");
+        printf("1. Rechercher des itineraires de bus disponibles\n");
         printf("2. Reserver un billet de bus\n");
         printf("3. Afficher l'historique des reservations\n");
         printf("4. Rechercher un passager par son nom\n");
